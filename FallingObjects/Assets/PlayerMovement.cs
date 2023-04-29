@@ -37,6 +37,17 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = true;
         }
 
+        if (transform.position.x <= -12)
+        {
+            transform.position = new Vector3(-12, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x >= 12)
+        {
+            transform.position = new Vector3(12, transform.position.y, transform.position.z);
+        }
+
+
+
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && isJumping == false)
