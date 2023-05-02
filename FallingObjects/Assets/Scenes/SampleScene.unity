@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 522608502}
   - component: {fileID: 522608501}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlayerInjured
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,11 +608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6645417883110522340, guid: 8db3c76ece24dd64e81c1a72f4f7a3ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.79
+      value: -19.41
       objectReference: {fileID: 0}
     - target: {fileID: 6645417883110522340, guid: 8db3c76ece24dd64e81c1a72f4f7a3ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.23
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 6645417883110522340, guid: 8db3c76ece24dd64e81c1a72f4f7a3ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -661,11 +661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1726819573858933645, guid: 5ef0c89a4a132f547a57cef0401a474e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.96
+      value: 17.01
       objectReference: {fileID: 0}
     - target: {fileID: 1726819573858933645, guid: 5ef0c89a4a132f547a57cef0401a474e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.19
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1726819573858933645, guid: 5ef0c89a4a132f547a57cef0401a474e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 870438158}
   - component: {fileID: 870438157}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MuerteTexto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -771,8 +771,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: El empleado no tiene seguro medico, por lo que tendras que cubrir los gastos
-    medicos, y su salario por duracion de su incapacidad laboral.
+  m_text: "El empleado no tiene seguro medico, por lo que tendras que cubrir los
+    gastos medicos, y su salario por su duraci\xF3n de  incapacidad laboral."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1178,7 +1178,7 @@ GameObject:
   - component: {fileID: 1168877163}
   - component: {fileID: 1168877162}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BedInjured
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1753,7 +1753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911978543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.24, y: -3.3, z: 0}
+  m_LocalPosition: {x: 0.01, y: -3.2, z: 0}
   m_LocalScale: {x: 0.5312338, y: 0.45010772, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
