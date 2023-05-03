@@ -61,8 +61,8 @@ public class timeR : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
            
-            Debug.Log("Tiempo:" + tiempoCrono.TotalSeconds.ToString());
-            Debug.Log("TIME:"+ time_taken.ToString());
+           
+            Debug.Log("Tiempo:"+ time_taken.ToString());
             FloorCollider.instanciar.LogCount();
        
 
@@ -80,7 +80,7 @@ public class timeR : MonoBehaviour
             tiempoCrono = TimeSpan.FromSeconds(tiempoTrans);
             double tiempoEnSegundos = tiempoCrono.TotalSeconds;
             time_taken = tiempoEnSegundos;
-            string tiempoCronoStr = "Tiempo: " + tiempoEnSegundos.ToString("0.00");
+            string tiempoCronoStr = "" + tiempoEnSegundos.ToString("0.00");
             Crono.text = tiempoCronoStr;
 
 

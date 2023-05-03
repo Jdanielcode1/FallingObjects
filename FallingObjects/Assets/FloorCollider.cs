@@ -26,7 +26,7 @@ public class FloorCollider : MonoBehaviour
     {
         if (pointsText != null)
         {
-            pointsText.text = "Points:   " + collidedCount;
+            pointsText.text = "" + collidedCount;
         } 
     }
 
