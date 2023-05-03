@@ -12,7 +12,7 @@ public class timeR : MonoBehaviour
     public TextMeshProUGUI Crono;
     private TimeSpan tiempoCrono;
     private bool timerBool;
-    private float tiempoTrans;
+    private float time_taken;
     private float startTime;
     
 
@@ -26,19 +26,23 @@ public class timeR : MonoBehaviour
         Crono.text = "Tiempo: 00:00:00";
         timerBool = true;
         startTime = Time.time;
+        
     }
 
     public void ResetTimer()
     {
         startTime= Time.time;
-        tiempoTrans = 0;
+        time_taken = 0;
+        
 
     }
 
     public void IniciarTiempo()
     {
         timerBool = true;
-        tiempoTrans = 0F;
+        time_taken = 0F;
+        
+
 
         StartCoroutine(ActUpdate());
     }
@@ -53,8 +57,8 @@ public class timeR : MonoBehaviour
        
         if (collision.gameObject.CompareTag("Enemy"))
         {
-
-            Debug.Log("Tiempo:" + tiempoCrono.ToString());
+           
+            Debug.Log("Tiempo:" + tiempoCrono.TotalSeconds.ToString());
             FloorCollider.instanciar.LogCount();
        
 
@@ -67,9 +71,11 @@ public class timeR : MonoBehaviour
     {
         while (timerBool)
         {
-            tiempoTrans += Time.deltaTime;
-            tiempoCrono = TimeSpan.FromSeconds(tiempoTrans);
-            string tiempoCronoStr = "Tiempo: " + tiempoCrono.ToString("mm':'ss':'ff");
+            
+            time_taken += (Time.deltaTime/2.5f);
+            tiempoCrono = TimeSpan.FromSeconds(time_taken);
+            double tiempoEnSegundos = tiempoCrono.TotalSeconds;
+            string tiempoCronoStr = "Tiempo: " + tiempoEnSegundos.ToString("0.00");
             Crono.text = tiempoCronoStr;
 
 
