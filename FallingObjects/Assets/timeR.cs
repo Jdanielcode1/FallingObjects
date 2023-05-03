@@ -12,9 +12,12 @@ public class timeR : MonoBehaviour
     public TextMeshProUGUI Crono;
     private TimeSpan tiempoCrono;
     private bool timerBool;
-    private float time_taken;
+    private float tiempoTrans;
     private float startTime;
+    public double time_taken;
     
+
+
 
     private void Awake()
     {
@@ -32,7 +35,7 @@ public class timeR : MonoBehaviour
     public void ResetTimer()
     {
         startTime= Time.time;
-        time_taken = 0;
+        tiempoTrans = 0;
         
 
     }
@@ -40,7 +43,7 @@ public class timeR : MonoBehaviour
     public void IniciarTiempo()
     {
         timerBool = true;
-        time_taken = 0F;
+        tiempoTrans = 0F;
         
 
 
@@ -59,6 +62,7 @@ public class timeR : MonoBehaviour
         {
            
             Debug.Log("Tiempo:" + tiempoCrono.TotalSeconds.ToString());
+            Debug.Log("TIME:"+ time_taken.ToString());
             FloorCollider.instanciar.LogCount();
        
 
@@ -72,9 +76,10 @@ public class timeR : MonoBehaviour
         while (timerBool)
         {
             
-            time_taken += (Time.deltaTime/2.5f);
-            tiempoCrono = TimeSpan.FromSeconds(time_taken);
+            tiempoTrans += (Time.deltaTime/2.5f);
+            tiempoCrono = TimeSpan.FromSeconds(tiempoTrans);
             double tiempoEnSegundos = tiempoCrono.TotalSeconds;
+            time_taken = tiempoEnSegundos;
             string tiempoCronoStr = "Tiempo: " + tiempoEnSegundos.ToString("0.00");
             Crono.text = tiempoCronoStr;
 
