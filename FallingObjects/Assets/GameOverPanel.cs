@@ -61,7 +61,7 @@ public class GameOverPanel : MonoBehaviour
         string uri = "https://info-api.herokuapp.com/partida_falling_objects/";
         WWWForm form = new WWWForm();
 
-        form.AddField("player", "https://info-api.herokuapp.com/player_user/1/");
+        form.AddField("player", "/player_user/1/");
         form.AddField("score", pointsText.text);
         form.AddField("time_taken", Crono.text);
         using (UnityWebRequest request = UnityWebRequest.Post(uri, form))
